@@ -4,7 +4,6 @@ import com.codeborne.selenide.SelenideElement;
 import web.data.DataHelper;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.*;
 
 public class DashboardReplenishCards {
     private SelenideElement sumField = $("[class=input__control]");
