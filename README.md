@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/gx127hdqkwg1o6hw/branch/main?svg=true)](https://ci.appveyor.com/project/NadezhdaZykova/aqa-2-4-page-object/branch/main)
