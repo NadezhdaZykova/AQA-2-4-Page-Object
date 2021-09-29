@@ -11,7 +11,7 @@ public class DashboardReplenishCards {
     private SelenideElement replenishButton = $("[class=button__text]");
 
 
-    public DashboardPage replenish(String sum, DataHelper.CardsInfo cardsInfo, int number) {
+    public DashboardYourCards replenish(String sum, DataHelper.CardsInfo cardsInfo, int number) {
         sumField.setValue(sum);
         if (number != 1) {
             cardField.setValue(cardsInfo.getFirst());
@@ -19,7 +19,7 @@ public class DashboardReplenishCards {
             cardField.setValue(cardsInfo.getSecond());
         }
         replenishButton.click();
-        return new DashboardPage();
+        return new DashboardYourCards();
     }
 
 }

@@ -23,12 +23,12 @@ class MoneyTransferTest {
     @Test
     void transferMaxMoneyBetweenOwnCards() {
         var cardsInfo = DataHelper.getCardsInfo();
-        var replenishThis = new DashboardReplenishCards();
         var yourCards = new DashboardYourCards();
         int firstBalanceBefore = yourCards.getFirstCardBalance();
         int secondBalanceBefore = yourCards.getSecondCardBalance();
         int difference = 10000;
         yourCards.replenishFirst();
+        var replenishThis = new DashboardReplenishCards();
         replenishThis.replenish(Integer.toString(difference), cardsInfo, 1);
         assertEquals(firstBalanceBefore + difference, yourCards.getFirstCardBalance());
         assertEquals(secondBalanceBefore - difference, yourCards.getSecondCardBalance());
@@ -37,12 +37,12 @@ class MoneyTransferTest {
     @Test
     void transferMoreMaxMoneyBetweenOwnCards() {
         var cardsInfo = DataHelper.getCardsInfo();
-        var replenishThis = new DashboardReplenishCards();
         var yourCards = new DashboardYourCards();
         int firstBalanceBefore = yourCards.getFirstCardBalance();
         int secondBalanceBefore = yourCards.getSecondCardBalance();
         int difference = 100000;
         yourCards.replenishSecond();
+        var replenishThis = new DashboardReplenishCards();
         replenishThis.replenish(Integer.toString(difference), cardsInfo, 2);
         assertEquals(firstBalanceBefore - difference, yourCards.getFirstCardBalance());
         assertEquals(secondBalanceBefore + difference, yourCards.getSecondCardBalance());

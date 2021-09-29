@@ -14,14 +14,14 @@ public class DashboardYourCards {
     private final String balanceStart = "баланс: ";
     private final String balanceFinish = " р.";
 
-    public DashboardPage replenishFirst() {
+    public DashboardReplenishCards replenishFirst() {
         replenishFirstCardButton.click();
-        return new DashboardPage();
+        return new DashboardReplenishCards();
     }
 
-    public DashboardPage replenishSecond() {
+    public DashboardReplenishCards replenishSecond() {
         replenishSecondCardButton.click();
-        return new DashboardPage();
+        return new DashboardReplenishCards();
     }
 
     public int getFirstCardBalance() {
