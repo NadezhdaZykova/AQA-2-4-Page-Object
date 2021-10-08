@@ -26,7 +26,7 @@ class MoneyTransferTest {
         var yourCards = new DashboardYourCards();
         int firstBalanceBefore = yourCards.getFirstCardBalance();
         int secondBalanceBefore = yourCards.getSecondCardBalance();
-        int difference = 10000;
+        int difference = 100000;
         yourCards.replenishFirst();
         var replenishThis = new DashboardReplenishCards();
         replenishThis.replenish(Integer.toString(difference), cardsInfo, 1);
@@ -44,8 +44,8 @@ class MoneyTransferTest {
         yourCards.replenishSecond();
         var replenishThis = new DashboardReplenishCards();
         replenishThis.replenish(Integer.toString(difference), cardsInfo, 2);
-        assertEquals(firstBalanceBefore - difference, yourCards.getFirstCardBalance());
-        assertEquals(secondBalanceBefore + difference, yourCards.getSecondCardBalance());
+        assertEquals(firstBalanceBefore, yourCards.getFirstCardBalance());
+        assertEquals(secondBalanceBefore, yourCards.getSecondCardBalance());
     }
 }
 
